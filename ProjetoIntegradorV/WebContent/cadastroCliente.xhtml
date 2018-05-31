@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	   <title>Projeto Integrador V - Cadastrar Cliente</title>
+	   <meta name="description" content=""/>
+	   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	   <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	   <style>
+	        body {
+	            padding-top: 50px;
+	            padding-bottom: 20px;
+	        }
+	   </style>
+	   <link rel="stylesheet" href="css/style.css"/>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>     
+    </h:head>
+	<h:body>
+		<ui:include src="/inc/header.xhtml"/>
+	
+		<!-- Conteúdo principal da página -->
+		<main class="container">
+		<h1>Novo Cliente</h1>
+		<hr/>
+			<f:view>
+				<h:form>
+			<!--  	<div class="form-group">
+					<h:outputLabel for="clienteId" value="Id:"/>
+					<h:inputText id="customerId" styleClass="form-control" value="#{clienteManagedBean.cliente.id}"/>
+				</div> -->
+				<div class="form-group">
+					<h:outputLabel value="Nome:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.nome}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Data de Nascimento:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.data_nascimento}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="CPF:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.cpf}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="RG:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.rg}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Telefone Fixo:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.telefone_fixo}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Celular:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.telefone_celular}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="CEP:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.cep}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Rua:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.endereco_rua}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Número da Rua:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.endereco_numero}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Complemento:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.complemento}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Bairro:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.bairro}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Cidade:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.cidade}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Estado:"/>
+					<h:selectOneMenu styleClass="form-control" value="#{clienteManagedBean.cliente.estado}">
+						<f:selectItem itemValue="AC" itemLabel="AC"/>
+						<f:selectItem itemValue="AL" itemLabel="AL"/>
+						<f:selectItem itemValue="AM" itemLabel="AM"/>
+						<f:selectItem itemValue="AP" itemLabel="AP"/>
+						<f:selectItem itemValue="BA" itemLabel="BA"/>
+						<f:selectItem itemValue="CE" itemLabel="CE"/>
+						<f:selectItem itemValue="DF" itemLabel="DF"/>
+						<f:selectItem itemValue="ES" itemLabel="ES"/>
+						<f:selectItem itemValue="GO" itemLabel="GO"/>
+						<f:selectItem itemValue="MA" itemLabel="MA"/>
+						<f:selectItem itemValue="MG" itemLabel="MG"/>
+						<f:selectItem itemValue="MS" itemLabel="MS"/>
+						<f:selectItem itemValue="MT" itemLabel="MT"/>
+						<f:selectItem itemValue="PA" itemLabel="PA"/>
+						<f:selectItem itemValue="PB" itemLabel="PB"/>
+						<f:selectItem itemValue="PE" itemLabel="PE"/>
+						<f:selectItem itemValue="PI" itemLabel="PI"/>
+						<f:selectItem itemValue="PR" itemLabel="PR"/>
+						<f:selectItem itemValue="RJ" itemLabel="RJ"/>
+						<f:selectItem itemValue="RN" itemLabel="RN"/>
+						<f:selectItem itemValue="RO" itemLabel="RO"/>
+						<f:selectItem itemValue="RR" itemLabel="RR"/>
+						<f:selectItem itemValue="RS" itemLabel="RS"/>
+						<f:selectItem itemValue="SC" itemLabel="SC"/>
+						<f:selectItem itemValue="SE" itemLabel="SE"/>
+						<f:selectItem itemValue="SP" itemLabel="SP"/>
+						<f:selectItem itemValue="TO" itemLabel="TO"/>
+					</h:selectOneMenu>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Email:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.email}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Senha:"/>
+					<h:inputText styleClass="form-control" value="#{clienteManagedBean.cliente.senha}"/>
+				</div>
+				<div class="form-group">
+					<h:outputLabel value="Sexo:"/>
+					<h:selectOneRadio value="#{clienteManagedBean.cliente.sexo}">
+						<f:selectItem itemValue="M" itemLabel="Masculino" />
+   						<f:selectItem itemValue="F" itemLabel="Feminino" />
+					</h:selectOneRadio>
+				</div>
+				<div id="actions" class="row">
+					<div class="col-md-12">
+						<h:commandLink styleClass="btn btn-default" value="Cancelar" action="index?faces-redirect=true"/>
+						<h:commandLink styleClass="btn btn-primary" value="Salvar" action="#{clienteManagedBean.cadastrarCliente}"/>
+					</div>
+				</div>
+				</h:form>			
+			</f:view>
+		</main>
+		<ui:include src="/inc/footer.xhtml"/>
+	</h:body>
+</html>
