@@ -26,20 +26,23 @@
 	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"/>     
     </h:head>
     
+	
 	<h:body>
 		<ui:include src="/inc/header.xhtml"/>
-			<main>
-				<f:view>
-					<h:form>
+		
+		<main class="container">
+		<h1>Jogue agora o MazeRunner</h1>
+		<hr/>
+			<f:view>
+				<h:form>
 						<div id="actions" class="row">
 							<div class="col-md-12">
 								<h:commandLink styleClass="btn btn-primary" value="Abrir jogo" action="#{clienteManagedBean.abrirJogo}"/>
 							</div>
 						</div>
 					</h:form>
-				</f:view>
-			</main>	
-		<ui:include src="/inc/header.xhtml"/>
+			</f:view>
+		</main>
+		<ui:include src="/inc/footer.xhtml"/>
 	</h:body>
-
 </html>

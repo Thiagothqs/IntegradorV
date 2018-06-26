@@ -32,7 +32,8 @@
 		<h1>Novo Cliente</h1>
 		<hr/>
 			<f:view>
-				<h:form>
+				<h:form id="cadastro">
+					<p:messages id="erro" />
 			<!--  	<div class="form-group">
 					<h:outputLabel for="clienteId" value="Id:"/>
 					<h:inputText id="customerId" styleClass="form-control" value="#{clienteManagedBean.cliente.id}"/>
@@ -138,7 +139,7 @@
 						<h:commandLink styleClass="btn btn-primary" value="Salvar" action="#{clienteManagedBean.cadastrarCliente}"/>
 					</div>
 				</div>
-				</h:form>			
+				</h:form>	
 			</f:view>
 		</main>
 		<ui:include src="/inc/footer.xhtml"/>

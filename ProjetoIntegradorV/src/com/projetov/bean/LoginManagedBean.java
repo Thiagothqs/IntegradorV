@@ -23,8 +23,9 @@ public class LoginManagedBean implements Serializable {
 	}
 	
 	public String logarCliente() {
-		service.login(email, senha);
-		return "index";
+		String retorna = "";
+		retorna = service.login(email, senha);
+		return retorna;
 	}
 	
 	public String getEmail() {
